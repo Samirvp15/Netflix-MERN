@@ -1,6 +1,7 @@
 import express from 'express';
 import cookieParser from 'cookie-parser';
 import path from 'path';
+import cors from 'cors';
 
 import authRoutes from './routes/auth.route.js';
 import movieRoutes from './routes/movie.route.js';
@@ -12,6 +13,10 @@ import { connectDB } from './config/db.js';
 import { protectRoute } from './middleware/protectRoute.js';
 
 const app = express();
+// Disable header X-Powered-By: 
+app.disable('x-powered-by');
+// Middleware for handle CORS - All Origins allowed (*) 
+app.use(cors());
 
 const PORT = ENV_VARS.PORT;
 const __dirname = path.resolve();
