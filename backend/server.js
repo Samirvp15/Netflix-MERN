@@ -1,13 +1,14 @@
 import express from 'express';
 import dotenv from 'dotenv';
+import authRoutes from './routes/auth.route.js';
+
+
 
 const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.get('/api/v1/login', (req, res) => {});
+app.use('/api/v1/auth', authRoutes);
 
-app.get('/api/v1/login', (req, res) => {});
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`Listening on port ${port}!`));

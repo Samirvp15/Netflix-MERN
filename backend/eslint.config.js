@@ -1,4 +1,4 @@
-import globals from "globals";
+import globals from 'globals';
 
 
 export default [
@@ -6,6 +6,7 @@ export default [
   rules: {
     // Aquí configuras la regla para los puntos y comas
     semi: ['error', 'always'],
+    quotes: ['error', 'single'],
   },
 },
   
