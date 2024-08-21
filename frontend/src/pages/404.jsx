@@ -12,12 +12,12 @@ const NotFoundPage = () => {
 				</Link>
 			</header>
 			<main className='text-center error-page--content z-10'>
-				<h1 className='text-7xl font-semibold mb-4'>Lost your way?</h1>
+				<h1 className='text-7xl font-semibold mb-4'>Perdiste tu camino?</h1>
 				<p className='mb-6 text-xl'>
-					Lo siento, no se encontró la pagina.
+					Lo siento, no se encontró la pagina. Ve a la página de Inicio para más contenido.
 				</p>
 				<Link to={"/"} className='bg-white text-black py-2 px-4 rounded'>
-					Netflix Home
+					Home
 				</Link>
 			</main>
 		</div>
