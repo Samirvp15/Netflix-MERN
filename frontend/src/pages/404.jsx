@@ -12,7 +12,7 @@ const NotFoundPage = () => {
 				</Link>
 			</header>
 			<main className='text-center error-page--content z-10'>
-				<h1 className='text-7xl font-semibold mb-4'>Perdiste tu camino?</h1>
+				<h1 className='text-7xl font-semibold mb-4'>Perdiste tu camino...</h1>
 				<p className='mb-6 text-xl'>
 					Lo siento, no se encontró la pagina. Ve a la página de Inicio para más contenido.
 				</p>
