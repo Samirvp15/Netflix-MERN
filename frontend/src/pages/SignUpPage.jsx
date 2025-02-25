@@ -27,12 +27,12 @@ const SignUpPage = () => {
 
 			<div className='flex justify-center items-center mt-20 mx-3'>
 				<div className='w-full max-w-md p-8 space-y-6 bg-black/60 rounded-lg shadow-md'>
-					<h1 className='text-center text-white text-2xl font-bold mb-4'>Sign Up</h1>
+					<h1 className='text-center text-white text-2xl font-bold mb-4'>Registrate</h1>
 
 					<form className='space-y-4' onSubmit={handleSignUp}>
 						<div>
 							<label htmlFor='email' className='text-sm font-medium text-gray-300 block'>
-								Email
+								Correo
 							</label>
 							<input
 								type='email'
@@ -46,7 +46,7 @@ const SignUpPage = () => {
 
 						<div>
 							<label htmlFor='username' className='text-sm font-medium text-gray-300 block'>
-								Username
+								Nombre de Usuario
 							</label>
 							<input
 								type='text'
@@ -60,7 +60,7 @@ const SignUpPage = () => {
 
 						<div>
 							<label htmlFor='password' className='text-sm font-medium text-gray-300 block'>
-								Password
+								Contraseña
 							</label>
 							<input
 								type='password'
@@ -78,13 +78,13 @@ const SignUpPage = () => {
 						'
 							disabled={isSigningUp}
 						>
-							{isSigningUp ? "Loading..." : "Sign Up"}
+							{isSigningUp ? "Cargando..." : "Registrarse"}
 						</button>
 					</form>
 					<div className='text-center text-gray-400'>
-						Already a member?{" "}
+						Ya tienes una cuenta?{" "}
 						<Link to={"/login"} className='text-red-500 hover:underline'>
-							Sign in
+							Inicia Sesión
 						</Link>
 					</div>
 				</div>

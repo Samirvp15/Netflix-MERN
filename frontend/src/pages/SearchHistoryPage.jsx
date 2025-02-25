@@ -49,9 +49,9 @@ const SearchHistoryPage = () => {
 			<div className='bg-black min-h-screen text-white'>
 				<Navbar />
 				<div className='max-w-6xl mx-auto px-4 py-8'>
-					<h1 className='text-3xl font-bold mb-8'>Search History</h1>
+					<h1 className='text-3xl font-bold mb-8'>Historial de Búsqueda</h1>
 					<div className='flex justify-center items-center h-96'>
-						<p className='text-xl'>No search history found</p>
+						<p className='text-xl'>Historial de Búsqueda No Encontrada</p>
 					</div>
 				</div>
 			</div>
@@ -63,7 +63,7 @@ const SearchHistoryPage = () => {
 			<Navbar />
 
 			<div className='max-w-6xl mx-auto px-4 py-8'>
-				<h1 className='text-3xl font-bold mb-8'>Search History</h1>
+				<h1 className='text-3xl font-bold mb-8'>Historial de Búsqueda</h1>
 				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-4'>
 					{searchHistory?.map((entry) => (
 						<div key={entry.id} className='bg-gray-800 p-4 rounded flex items-start'>

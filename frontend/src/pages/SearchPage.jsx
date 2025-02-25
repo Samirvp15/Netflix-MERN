@@ -27,9 +27,9 @@ const SearchPage = () => {
 			setResults(res.data.content);
 		} catch (error) {
 			if (error.response.status === 404) {
-				toast.error("Nothing found, make sure you are searching under the right category");
+				toast.error("Contenido no encontrado");
 			} else {
-				toast.error("An error occurred, please try again later");
+				toast.error("Ocurrio un error, intente otra vez");
 			}
 		}
 	};

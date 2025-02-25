@@ -9,13 +9,13 @@ export async function signup(req, res) {
     if (!email || !password || !username) {
       return res
         .status(400)
-        .json({ success: false, message: 'All fields are required' });
+        .json({ success: false, message: 'Todos los campos son requeridos' });
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
-      return res.status(400).json({ success: false, message: 'Invalid email' });
+      return res.status(400).json({ success: false, message: 'Correo inválido' });
     }
 
     if (password.length < 6) {
@@ -23,7 +23,7 @@ export async function signup(req, res) {
         .status(400)
         .json({
           success: false,
-          message: 'Password must be at least 6 characters',
+          message: 'Contraseña debe tener al menos 6 caracteres',
         });
     }
 
@@ -32,7 +32,7 @@ export async function signup(req, res) {
     if (existingUserByEmail) {
       return res
         .status(400)
-        .json({ success: false, message: 'Email already exists' });
+        .json({ success: false, message: 'Ya existe este correo' });
     }
 
     const existingUserByUsername = await User.findOne({ username: username });
@@ -40,7 +40,7 @@ export async function signup(req, res) {
     if (existingUserByUsername) {
       return res
         .status(400)
-        .json({ success: false, message: 'Username already exists' });
+        .json({ success: false, message: 'Ya existe este nombre de usuario' });
     }
 
     const salt = await bcryptjs.genSalt(10);
@@ -80,14 +80,14 @@ export async function login(req, res) {
     if (!email || !password) {
       return res
         .status(400)
-        .json({ success: false, message: 'All fields are required' });
+        .json({ success: false, message: 'Todos los campos son requeridos' });
     }
 
     const user = await User.findOne({ email: email });
     if (!user) {
       return res
         .status(404)
-        .json({ success: false, message: 'Invalid credentials' });
+        .json({ success: false, message: 'Credenciales inválidas' });
     }
 
     const isPasswordCorrect = await bcryptjs.compare(password, user.password);
@@ -95,7 +95,7 @@ export async function login(req, res) {
     if (!isPasswordCorrect) {
       return res
         .status(400)
-        .json({ success: false, message: 'Invalid credentials' });
+        .json({ success: false, message: 'Credenciales inválidas' });
     }
 
     generateTokenAndSetCookie(user._id, res);
@@ -116,7 +116,7 @@ export async function login(req, res) {
 export async function logout(req, res) {
   try {
     res.clearCookie('jwt-netflix');
-    res.status(200).json({ success: true, message: 'Logged out successfully' });
+    res.status(200).json({ success: true, message: 'Sesión Cerrada Exitosamente' });
   } catch (error) {
     console.log('Error in logout controller', error.message);
     res.status(500).json({ success: false, message: 'Internal server error' });

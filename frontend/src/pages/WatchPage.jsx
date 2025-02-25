@@ -94,7 +94,7 @@ const WatchPage = () => {
 				<div className='max-w-6xl mx-auto'>
 					<Navbar />
 					<div className='text-center mx-auto px-4 py-8 h-full mt-40'>
-						<h2 className='text-2xl sm:text-5xl font-bold text-balance'>Content not found 😥</h2>
+						<h2 className='text-2xl sm:text-5xl font-bold text-balance'>Contenido no econtrado 😥</h2>
 					</div>
 				</div>
 			</div>
@@ -147,7 +147,7 @@ const WatchPage = () => {
 
 					{trailers?.length === 0 && (
 						<h2 className='text-xl text-center mt-5'>
-							No trailers available for{" "}
+							Sin trailer disponibles para{" "}
 							<span className='font-bold text-red-600'>{content?.title || content?.name}</span> 😥
 						</h2>
 					)}
@@ -180,7 +180,7 @@ const WatchPage = () => {
 
 				{similarContent.length > 0 && (
 					<div className='mt-12 max-w-5xl mx-auto relative'>
-						<h3 className='text-3xl font-bold mb-4'>Similar Movies/Tv Show</h3>
+						<h3 className='text-3xl font-bold mb-4'>Peliculas/Tv Shows Similares</h3>
 
 						<div className='flex overflow-x-scroll scrollbar-hide gap-4 pb-4 group' ref={sliderRef}>
 							{similarContent.map((content) => {

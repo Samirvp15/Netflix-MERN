@@ -1,9 +1,9 @@
 import { z } from 'zod';
 
 const signupSchema = z.object({
-  email: z.string().email({ message: 'Invalid email' }),
-  password: z.string().min(6, { message: 'Password must be at least 6 characters' }),
-  username: z.string().min(3,{ message: 'Username is required' }),
+  email: z.string().email({ message: 'Correo Inválido' }),
+  password: z.string().min(6, { message: 'Contraseña debe tener al menos 6 caracteres' }),
+  username: z.string().min(3,{ message: 'Nombre de usuario es requerido' }),
 });
 
 

@@ -13,9 +13,9 @@ export const useAuthStore = create((set) => ({
 		try {
 			const response = await axios.post("/api/v1/auth/signup", credentials);
 			set({ user: response.data.user, isSigningUp: false });
-			toast.success("Account created successfully");
+			toast.success("Cuenta Creada Exitosamente");
 		} catch (error) {
-			toast.error(error.response.data.message || "Signup failed");
+			toast.error(error.response.data.message || "Inicio de Sesion Fallido");
 			set({ isSigningUp: false, user: null });
 		}
 	},
@@ -26,7 +26,7 @@ export const useAuthStore = create((set) => ({
 			set({ user: response.data.user, isLoggingIn: false });
 		} catch (error) {
 			set({ isLoggingIn: false, user: null });
-			toast.error(error.response.data.message || "Login failed");
+			toast.error(error.response.data.message || "Inicio de Sesion Fallido");
 		}
 	},
 	logout: async () => {
@@ -34,10 +34,10 @@ export const useAuthStore = create((set) => ({
 		try {
 			await axios.post("/api/v1/auth/logout");
 			set({ user: null, isLoggingOut: false });
-			toast.success("Logged out successfully");
+			toast.success("Sesión Cerrada Exitosamente");
 		} catch (error) {
 			set({ isLoggingOut: false });
-			toast.error(error.response.data.message || "Logout failed");
+			toast.error(error.response.data.message || "Cierre de Sesion Fallido");
 		}
 	},
 	authCheck: async () => {
@@ -48,7 +48,7 @@ export const useAuthStore = create((set) => ({
 			set({ user: response.data.user, isCheckingAuth: false });
 		} catch (error) {
 			set({ isCheckingAuth: false, user: null });
-			// toast.error(error.response.data.message || "An error occurred");
+			toast.error(error.response.data.message || "Ocurrio un error inesperado");
 		}
 	},
 }));

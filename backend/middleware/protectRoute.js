@@ -7,19 +7,19 @@ export const protectRoute = async (req, res, next) => {
 		const token = req.cookies['jwt-netflix'];
 
 		if (!token) {
-			return res.status(401).json({ success: false, message: 'Unauthorized - No Token Provided' });
+			return res.status(401).json({ success: false, message: 'Inautorizado - Token No Recibido' });
 		}
 
 		const decoded = jwt.verify(token, ENV_VARS.JWT_SECRET);
 
 		if (!decoded) {
-			return res.status(401).json({ success: false, message: 'Unauthorized - Invalid Token' });
+			return res.status(401).json({ success: false, message: 'Inautorizado - Token Inválido' });
 		}
 
 		const user = await User.findById(decoded.userId).select('-password');
 
 		if (!user) {
-			return res.status(404).json({ success: false, message: 'User not found' });
+			return res.status(404).json({ success: false, message: 'Usuario No Encontrado' });
 		}
 
 		req.user = user;
