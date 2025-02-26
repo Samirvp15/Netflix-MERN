@@ -45,7 +45,7 @@ const SearchPage = () => {
 						} hover:bg-red-700`}
 						onClick={() => handleTabClick("movie")}
 					>
-						Movies
+						Peliculas
 					</button>
 					<button
 						className={`py-2 px-4 rounded ${
@@ -61,7 +61,7 @@ const SearchPage = () => {
 						} hover:bg-red-700`}
 						onClick={() => handleTabClick("person")}
 					>
-						Person
+						Personas
 					</button>
 				</div>
 
@@ -70,7 +70,7 @@ const SearchPage = () => {
 						type='text'
 						value={searchTerm}
 						onChange={(e) => setSearchTerm(e.target.value)}
-						placeholder={"Search for a " + activeTab}
+						placeholder={"Busca peliculas, tv shows o personas"}
 						className='w-full p-2 rounded bg-gray-800 text-white'
 					/>
 					<button className='bg-red-600 hover:bg-red-700 text-white p-2 rounded'>

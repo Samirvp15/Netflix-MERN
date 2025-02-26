@@ -48,7 +48,8 @@ export const useAuthStore = create((set) => ({
 			set({ user: response.data.user, isCheckingAuth: false });
 		} catch (error) {
 			set({ isCheckingAuth: false, user: null });
-			toast.error(error.response.data.message || "Ocurrio un error inesperado");
+			console.log(error.response.data.message)
+			//toast.error(error.response.data.message || "Ocurrio un error inesperado");
 		}
 	},
 }));

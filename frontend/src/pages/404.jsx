@@ -17,7 +17,7 @@ const NotFoundPage = () => {
 					Lo siento, no se encontró la pagina. Ve a la página de Inicio para más contenido.
 				</p>
 				<Link to={"/"} className='bg-white text-black py-2 px-4 rounded'>
-					Home
+					Inicio
 				</Link>
 			</main>
 		</div>

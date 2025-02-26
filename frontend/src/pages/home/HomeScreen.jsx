@@ -71,7 +71,7 @@ const HomeScreen = () => {
 							 items-center'
 						>
 							<Play className='size-6 mr-2 fill-black' />
-							Play
+							Reproducir
 						</Link>
 
 						<Link
@@ -79,7 +79,7 @@ const HomeScreen = () => {
 							className='bg-gray-500/70 hover:bg-gray-500 text-white py-2 px-4 rounded flex items-center'
 						>
 							<Info className='size-6 mr-2' />
-							More Info
+							Más info
 						</Link>
 					</div>
 				</div>

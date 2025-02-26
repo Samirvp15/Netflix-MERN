@@ -9,7 +9,7 @@ function formatDate(dateString) {
 	// Create a Date object from the input date string
 	const date = new Date(dateString);
 
-	const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+	const monthNames = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
 	// Extract the month, day, and year from the Date object
 	const month = monthNames[date.getUTCMonth()];
